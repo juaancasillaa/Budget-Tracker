@@ -1,0 +1,193 @@
+$font-stack: "Reddit Sans", sans-serif;
+$primary-color: #478C5C;
+$secondary-color: #FC2E20;
+$third-color: #ffff;
+$color1: #9993ff;
+$color2: #ff0000;
+$color3: #e1f2ff;
+@mixin gradient($color1, $color2, $color3) {
+    background: linear-gradient(to right, $color2, $color1, $color3);
+}
+
+@keyframes showDelet{
+    0%{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @include gradient(#9993ff, #ff0000, #e1f2ff);
+    font-family: $font-stack;
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+
+    .number {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $third-color;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .budget-number {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        max-width: 700px;
+        margin: 1rem 0 3rem;
+
+        .amount-container {
+            display: flex;
+        }
+    
+        #earned-symbol {
+            color: $primary-color;
+        }
+    
+        #amount-earned{
+            color: $primary-color;
+        }
+    
+        #spent-symbol {
+            color: $color2;
+        }
+    
+        #amount-spent {
+            color: $color2;
+        }
+    }
+
+    .input-area {
+
+        input {
+            border: none;
+            padding: 10px;
+            border-radius: 15px;
+            outline: none;
+        }
+
+        #description {
+            width: 330px;
+        }
+
+        #amount {
+            width: 70px;
+            text-align: center;
+        }
+
+    }
+    
+    .buttons-container {
+
+        margin: 10px 0 3rem;
+
+        #add-income{
+            border: none;
+            padding: 10px 20px;
+            border-radius: 15px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #add-expense {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 15px;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+    .items-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 70%;
+        max-width: 700px;
+
+        .container{
+            width: 49%;
+            border-radius: 15px;
+
+            .item {
+                width: 100%;
+                background-color: $third-color;border-radius: 15px;
+                margin: 5px 0;
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 40px 5px 30px;
+                position: relative;
+
+                .item-icome {
+                    display: flex;
+
+                    .income-symbol {
+                        color: $primary-color;
+                    }
+
+                    .income-amount {
+                        color: $primary-color;
+                    }
+                }
+
+                .item-expense {
+                    display: flex;
+
+                    .expense-symbol{
+                        color: $secondary-color;
+                    }
+
+                    .expense-amount  {
+                        color: $secondary-color;
+                    }
+
+                }
+
+                .fa {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $third-color;
+                    background-color: $secondary-color;
+                    border-top-right-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    cursor: pointer;
+                    transform: translateX(30px);
+                    opacity: 0;
+                }
+            }
+
+            .item:hover .fa {
+                animation: showDelet;
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}

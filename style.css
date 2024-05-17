@@ -1,0 +1,151 @@
+@keyframes showDelet {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #ff0000, #9993ff, #e1f2ff);
+  font-family: "Reddit Sans", sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+.container .number {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+}
+.container .budget-number {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  max-width: 700px;
+  margin: 1rem 0 3rem;
+}
+.container .budget-number .amount-container {
+  display: flex;
+}
+.container .budget-number #earned-symbol {
+  color: #478C5C;
+}
+.container .budget-number #amount-earned {
+  color: #478C5C;
+}
+.container .budget-number #spent-symbol {
+  color: #ff0000;
+}
+.container .budget-number #amount-spent {
+  color: #ff0000;
+}
+.container .input-area input {
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+  outline: none;
+}
+.container .input-area #description {
+  width: 330px;
+}
+.container .input-area #amount {
+  width: 70px;
+  text-align: center;
+}
+.container .buttons-container {
+  margin: 10px 0 3rem;
+}
+.container .buttons-container #add-income {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+}
+.container .buttons-container #add-expense {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+}
+.container .items-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 70%;
+  max-width: 700px;
+}
+.container .items-container .container {
+  width: 49%;
+  border-radius: 15px;
+}
+.container .items-container .container .item {
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 40px 5px 30px;
+  position: relative;
+}
+.container .items-container .container .item .item-icome {
+  display: flex;
+}
+.container .items-container .container .item .item-icome .income-symbol {
+  color: #478C5C;
+}
+.container .items-container .container .item .item-icome .income-amount {
+  color: #478C5C;
+}
+.container .items-container .container .item .item-expense {
+  display: flex;
+}
+.container .items-container .container .item .item-expense .expense-symbol {
+  color: #FC2E20;
+}
+.container .items-container .container .item .item-expense .expense-amount {
+  color: #FC2E20;
+}
+.container .items-container .container .item .fa {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #FC2E20;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
+  transform: translateX(30px);
+  opacity: 0;
+}
+.container .items-container .container .item:hover .fa {
+  animation: showDelet;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}/*# sourceMappingURL=style.css.map */

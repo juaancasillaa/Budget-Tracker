@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Budget Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <div class="budget-number">
+            <div class="number" id="earned">
+                <small>Earned</small>
+                <div class="amount-container">
+                    <p id="earned-symbol">$</p>
+                    <span id="amount-earned">0</span>
+                </div>
+            </div>
+
+            <div class="number" id="earned">
+                <small>You Have Avaliable</small>
+                <div class="amount-container">
+                    <p>$</p>
+                    <span id="amount-avaliable">0</span>
+                </div>
+            </div>
+
+            <div class="number" id="spent">
+                <small>Spent</small>
+                <div class="amount-container">
+                    <p id="spent-symbol">$</p>
+                    <span id="amount-spent">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="amount" placeholder="Amount">
+        </div>
+
+        <div class="buttons-container">
+            <button id="add-income">Add Income</button>
+            <button id="add-expense">Add Expense</button>
+        </div>
+
+        <div class="items-container">
+            <div id="income-container" class="container">
+                <h2>Income</h2>
+
+                <div class="item">
+                    <h4>Stuff Sold</h4>
+                    <div class="item-icome">
+                        <p class="income-symbol">$</p>
+                        <span class="income-amount">0</span>
+                    </div>
+                    <i class="fa fa-trash-o"></i>
+                </div>
+            </div>
+
+            <div id="expenses-container" class="container">
+                <h2>Expense</h2>
+
+                <div class="item">
+                    <h4>Stuff Bought</h4>
+                    <div class="item-expense">
+                        <p class="expense-symbol">$</p>
+                        <span class="expense-amount">0</span>
+                    </div>
+                    <i class="fa fa-trash-o"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
