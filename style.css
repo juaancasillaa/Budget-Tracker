@@ -109,13 +109,13 @@ body {
   padding: 5px 40px 5px 30px;
   position: relative;
 }
-.container .items-container .container .item .item-icome {
+.container .items-container .container .item .item-income {
   display: flex;
 }
-.container .items-container .container .item .item-icome .income-symbol {
+.container .items-container .container .item .item-income .income-symbol {
   color: #478C5C;
 }
-.container .items-container .container .item .item-icome .income-amount {
+.container .items-container .container .item .item-income .income-amount {
   color: #478C5C;
 }
 .container .items-container .container .item .item-expense {
